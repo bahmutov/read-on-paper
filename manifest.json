@@ -1,15 +1,23 @@
 {
     "manifest_version": 2,
+
     "name": "Read On Paper",
     "description": "Sends page's text to a tablet for reading.",
     "version": "0.1",
-    "background": { "scripts": ["background.js"] },
+    "background": { 
+      "scripts": [
+        "lib/jquery/jquery-1.9.1.min.js",
+        "readOnPaper.js"
+      ],
+      "persistent": false
+    },
     "browser_action": {
-        "name": "Read on paper",
+        "default_title": "Read on paper",
         "default_icon": "icon.png"
     },
     "permissions": [
-        "tabs", "http://*/*",
-        "http://localhost:3500/"
+        "tabs", 
+        "http://*/*",
+        "https://*/*"
     ]
 }
