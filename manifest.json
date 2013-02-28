@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+
+  "name": "Read On Paper",
+  "description": "Sends page's text to a tablet for reading.",
+  "version": "0.1",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "http://localhost:3500/"
+  ]
+}
