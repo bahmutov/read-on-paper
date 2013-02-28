@@ -3,6 +3,10 @@ var dbg = function(s) {
 		console.log("Readability: " + s);
 };
 
+readStyle = 'style-ebook';
+readMargin = 'margin-medium';
+readSize = 'size-medium';
+
 /*
  * Readability. An Arc90 Lab Experiment. 
  * Website: http://lab.arc90.com/experiments/readability
@@ -11,10 +15,10 @@ var dbg = function(s) {
  * Copyright (c) 2009 Arc90 Inc
  * Readability is licensed under the Apache License, Version 2.0.
 **/
-var readability = {
+readability = {
 	version:     '0.5.1',
-	emailSrc:    'http://lab.arc90.com/experiments/readability/email.php',
-	kindleSrc:   'http://lab.arc90.com/experiments/readability/kindle.php',
+	// emailSrc:    'http://lab.arc90.com/experiments/readability/email.php',
+	// kindleSrc:   'http://lab.arc90.com/experiments/readability/kindle.php',
 	iframeLoads: 0,
 	frameHack:   false, /**
 	                     * The frame hack is to workaround a firefox bug where if you
@@ -906,4 +910,6 @@ var readability = {
 	
 };
 
-readability.init();
+console.log('readability is ready');
+// console.log('starting readability');
+// readability.init();

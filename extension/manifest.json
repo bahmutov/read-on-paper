@@ -7,10 +7,9 @@
     "background": { 
       "scripts": [
         "lib/jquery/jquery-1.9.1.min.js",
-        "lib/readibility-0.5.1/readibility.js",
         "readOnPaper.js"
       ],
-      "persistent": false
+      "persistent": true
     },
     "browser_action": {
         "default_title": "Read on paper",
@@ -20,5 +19,14 @@
         "tabs", 
         "http://*/*",
         "https://*/*"
-    ]
+    ],
+    "content_scripts": [{
+        "matches": ["http://*/*", "https://*/*"],
+        "js": [
+            "lib/readability-0.5.1/readability.js"
+        ],
+        "css": [
+            "lib/readability-0.5.1/readability.css"
+        ]
+    }]
 }
