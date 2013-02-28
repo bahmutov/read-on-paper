@@ -8,13 +8,13 @@ function sendToServer(pageUrl, pageContent) {
 	var server = 'http://localhost:3500/';
 	console.assert(jQuery, 'cannot find jquery');
 	jQuery.ajax({
+		type: 'POST',
 		accepts: 'application/json',
-		contentType: 'application/json; charset=UTF-8',
 		url: 'http://localhost:3500/',
-		data: {
+		data: JSON.stringify({
 			url: pageUrl,
 			content: pageContent
-		},
+		}),
 		dataType: 'json'
 	}).done(function (data) {
 		console.log('finished sending data, received', data);
