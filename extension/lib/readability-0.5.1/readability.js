@@ -3,9 +3,9 @@ var dbg = function(s) {
 		console.log("Readability: " + s);
 };
 
-readStyle = 'style-ebook';
-readMargin = 'margin-medium';
-readSize = 'size-medium';
+readStyle = 'style-classy';
+readMargin = 'margin-narrow';
+readSize = 'size-large';
 
 /*
  * Readability. An Arc90 Lab Experiment. 

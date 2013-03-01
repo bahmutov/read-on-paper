@@ -44,6 +44,12 @@ http.createServer(function (req, res) {
 			});
 			res.end(fs.readFileSync('readability.css', 'utf8'));
 		break;
+		case '/lightpaperfibers.png':
+			res.writeHead(200, {
+				'Content-Type': 'image/png'
+			});
+			res.end(fs.readFileSync('lightpaperfibers.png'));
+		break;
 		case '/live.js':
 			console.log('serving live.js');
 			res.writeHead(200, {
@@ -64,7 +70,7 @@ function formPage(options) {
 	page += '<link rel="stylesheet" href="./readability.css" type="text/css">\n';
 	// page += '<script type="text/javascript" src="live.js"></script>';
 	page += '</head>\n';
-	page += '<body class="style-ebook">\n';
+	page += '<body class="style-classy">\n';
 	// page += _.unescape(options.content);
 	page += options.content;
 	page += '</body>\n</html>';
