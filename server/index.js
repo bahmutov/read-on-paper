@@ -25,7 +25,7 @@ http.createServer(function (req, res) {
 				// content = JSON.parse(content);
 				content = {
 					url: 'url',
-					content: content
+					content: content.replace('[object Object]', '')
 				};
 				console.log('received', content);
 			});
@@ -36,6 +36,10 @@ http.createServer(function (req, res) {
 			var page = formPage(content);
 			res.end(page);
 		}
+		break;
+		case '/content':
+			res.writeHead(200);
+			res.end(content.content);
 		break;
 		case '/readability.css':
 			console.log('serving css');

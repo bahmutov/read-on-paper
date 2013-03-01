@@ -1,0 +1,26 @@
+{
+    "name": "read-on-paper",
+    "description": "Readable content from Chrome to your tablet.",
+    "version": "1.0",
+    "devices": [
+        "iPhone",
+        "Android"
+    ],
+    "platformConfig": {
+        "android": {
+            "nativeNavigation": true
+        },
+        "iOS": {
+            "nativeNavigation": true
+        }
+    },
+    "views": [
+        {
+            "navigationTitle": "read",
+            "navigationIcon": "images/icons/read.png",
+            "uri": "./html/read.html",
+            "locales": "./txt/locales/en.txt",
+            "markup": "./txt/markup/read.txt"
+        }
+    ]
+}

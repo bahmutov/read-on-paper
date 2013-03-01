@@ -1,0 +1,11 @@
+.header
+  .divider
+  h1 App Cloud Web Server
+  .divider
+
+ul
+  - for( var i=0; i<apps.length; i++ )
+    li
+      a(href="/scan/" + apps[i].name) 
+        img(src="/images/icon.png")
+        p #{apps[i].name}

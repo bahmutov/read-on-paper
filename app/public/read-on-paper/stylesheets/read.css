@@ -1,0 +1,181 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+  background-image:url('lightpaperfibers.png');
+}
+
+#first-page-content {
+  line-height: 1.4em;
+  margin: 1em auto;
+  max-width: 800px;
+}
+#first-page-content a {
+  color:#003399;
+  text-decoration:none;
+}
+#first-page-content a:hover {
+  text-decoration:underline;
+}
+#first-page-content * {
+  margin-bottom: 16px;
+  border: none;
+  background: none;
+}
+#first-page-content img {
+  float: left;
+  margin-right: 12px;
+  margin-bottom: 12px;
+}
+#first-page-content h1 {
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid #333;
+  font-size: 1.2em;
+}
+#first-page-content blockquote {
+  margin-left: 3em;
+  margin-right: 3em;
+}
+#readFooter {
+  display: block;
+  border-top: 1px solid #333;
+  text-align: center;
+  clear: both;
+}
+div.footer-right {
+  float: right;
+  line-height: 1;
+  text-align: right;
+  font-size: .75em;
+  margin-top: 18px
+}
+a.footer-twitterLink {
+  clear: both;
+  float: left;
+  font-size: 11px;
+  margin-left: 228px;
+  margin-top: -32px;
+}
+span.version {
+  display: none;
+}
+
+/* Size options */
+
+.size-small {
+  font-size: 12px;
+}
+.size-medium {
+  font-size: 18px;
+}
+.size-large {
+  font-size: 26px;
+}
+.size-x-large {
+  font-size: 34px;
+}
+/* Style options */
+
+.style-novel {
+  font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+  background: #F4F3DB;
+  color: #222;
+}
+.style-ebook {
+  font-family:Arial, Helvetica, sans-serif;
+  background: #eee;
+  color: #333;
+}
+.style-ebook h1 {
+  font-family: "Arial Black", Gadget, sans-serif;
+  font-weight: normal;
+}
+.style-newspaper {
+  font-family:"Times New Roman", Times, serif;
+  background: #FFF;
+  color: #222;
+}
+.style-newspaper h1 {
+  text-transform:capitalize;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.style-terminal {
+  font-family: "Lucida Console", Monaco, monospace;
+  background: #1D4E2C;
+  color: #C6FFC6;
+}
+.style-terminal #first-page-content a {
+  color: #009933;
+}
+
+
+/* Begin Typekit Styles */
+
+.style-classy {
+  /*font-family: sans-serif;*/
+  font-family: "Courier New";
+  background-color: #FDFDFD;
+  color: #434343;
+}
+
+.style-classy #first-page-content a {
+  color: #8F674B;
+  text-decoration: none;
+}
+
+.style-post {
+  font-family: "Droid Sans", "Arial", sans-serif;
+  background-color: #FFF;
+  color: #222;
+}
+
+.style-post h1 {
+  font-family: "League Gothic";
+  font-size: 53px;
+  letter-spacing: 2px;
+  line-height: 1.4;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* Margin Options */
+
+.margin-x-wide {
+  width: 35%;
+}
+.margin-wide {
+  width: 55%;
+}
+.margin-medium {
+  width: 75%;
+}
+.margin-narrow {
+  width: 95%;
+}
+
+.content ul {
+  list-style-type: none;
+}
+
+.content ul li {
+  padding: 0px 20px;
+  position: relative;
+  height: 50px;
+  line-height: 50px;
+  border-bottom: #3b3b3b solid 1px;
+  background-color: #fff;
+}
+
+.content ul li:active {
+  background-color: #336699;
+  color: #fff;
+}
+
+.content ul li .arrow {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  margin-top: -6px;
+}
+
