@@ -1,3 +1,8 @@
+chrome.extension.onRequest.addListener(function(request, sender, sendResponse) {
+	console.log('got callback from', sender);
+	console.log('got data', request);
+});
+
 // Called when the user clicks on the browser action.
 chrome.browserAction.onClicked.addListener(function(tab) {
 	// sendToServer(tab.url, '');
@@ -9,8 +14,12 @@ chrome.browserAction.onClicked.addListener(function(tab) {
 		}
 	);
 */
+	var script = "readability.init();";
+	script += "var readableContent = document.getElementById('readability-content').innerHTML;";
+	script += "console.log('readable content', readableContent);";
+	script += "chrome.extension.sendRequest(readableContent);";
 	chrome.tabs.executeScript(tab.id, {
-		code: 'readability.init();'
+		code: script
 	});
 });
 
