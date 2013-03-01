@@ -68,10 +68,10 @@ readability = {
 		/* Build readability's DOM tree */
 		var overlay        = document.createElement("DIV");
 		var innerDiv       = document.createElement("DIV");
-		var articleTools   = readability.getArticleTools();
+		// var articleTools   = readability.getArticleTools();
 		var articleTitle   = readability.getArticleTitle();
 		var articleContent = readability.grabArticle(preserveUnlikelyCandidates);
-		var articleFooter  = readability.getArticleFooter();
+		// var articleFooter  = readability.getArticleFooter();
 
 		/**
 		 * If we attempted to strip unlikely candidates on the first run through, and we ended up with no content,
@@ -99,10 +99,10 @@ readability = {
 		innerDiv.className      = readMargin + " " + readSize;
 
 		/* Glue the structure of our document together. */
-		articleContent.appendChild( articleFooter  );
+		//articleContent.appendChild( articleFooter  );
 		      innerDiv.appendChild( articleTitle   );
 		      innerDiv.appendChild( articleContent );
-		       overlay.appendChild( articleTools   );
+		       // overlay.appendChild( articleTools   );
 		       overlay.appendChild( innerDiv       );
 
 		/* Clear the old HTML, insert the new content. */

@@ -1,6 +1,8 @@
 chrome.extension.onRequest.addListener(function(request, sender, sendResponse) {
-	console.log('got callback from', sender);
+	console.log('got callback from', sender.tab.url);
 	console.log('got data', request);
+	// sendToServer(sender.tab.url, _.escape(request));
+	sendToServer(sender.tab.url, request);
 });
 
 // Called when the user clicks on the browser action.
@@ -15,7 +17,7 @@ chrome.browserAction.onClicked.addListener(function(tab) {
 	);
 */
 	var script = "readability.init();";
-	script += "var readableContent = document.getElementById('readability-content').innerHTML;";
+	script += "var readableContent = document.getElementById('readOverlay').innerHTML;";
 	script += "console.log('readable content', readableContent);";
 	script += "chrome.extension.sendRequest(readableContent);";
 	chrome.tabs.executeScript(tab.id, {
@@ -27,15 +29,19 @@ function sendToServer(pageUrl, pageContent) {
 	console.log('sending page', pageUrl, 'to server');
 	var server = 'http://localhost:3500/';
 	console.assert(jQuery, 'cannot find jquery');
+
+
 	jQuery.ajax({
 		type: 'POST',
 		accepts: 'application/json',
 		url: 'http://localhost:3500/',
-		data: JSON.stringify({
-			url: pageUrl,
-			content: pageContent
-		}),
-		dataType: 'json'
+		//data: JSON.stringify({
+		//	url: pageUrl,
+		//	content: pageContent
+		//}),
+		//dataType: 'json'
+		data: pageContent,
+		dataType: 'text'
 	}).done(function (data) {
 		console.log('finished sending data, received', data);
 	}).fail(function (xhr, status, error) {

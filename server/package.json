@@ -4,6 +4,7 @@
   "description": "Received page content from Chrome extension, makes it available to tablets",
   "author": "Gleb Bahmutov <gleb.bahmutov@gmail.com>",
   "dependencies": {
+    "lodash": "latest"
   },
   "engines": {
     "node": ">= 0.8.0"
