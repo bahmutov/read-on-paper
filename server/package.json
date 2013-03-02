@@ -1,10 +1,9 @@
 {
   "name": "read-on-paper",
   "version": "0.0.1",
-  "description": "Received page content from Chrome extension, makes it available to tablets",
+  "description": "Receives page content from Chrome extension, makes it available through http GET",
   "author": "Gleb Bahmutov <gleb.bahmutov@gmail.com>",
   "dependencies": {
-    "lodash": "latest"
   },
   "engines": {
     "node": ">= 0.8.0"

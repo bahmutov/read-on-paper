@@ -1,6 +1,5 @@
 var http = require('http');
 var fs = require('fs');
-var _ = require('lodash');
 
 var options = {
 	port: 3500
@@ -22,7 +21,6 @@ http.createServer(function (req, res) {
 					'Content-Type': 'application/json'
 				});
 				res.end('{}');
-				// content = JSON.parse(content);
 				content = {
 					url: 'url',
 					content: content.replace('[object Object]', '')
@@ -48,18 +46,11 @@ http.createServer(function (req, res) {
 			});
 			res.end(fs.readFileSync('readability.css', 'utf8'));
 		break;
-		case '/lightpaperfibers.png':
+		case '/background.png':
 			res.writeHead(200, {
 				'Content-Type': 'image/png'
 			});
-			res.end(fs.readFileSync('lightpaperfibers.png'));
-		break;
-		case '/live.js':
-			console.log('serving live.js');
-			res.writeHead(200, {
-				'Content-Type': 'application/javascript'
-			});
-			res.end(fs.readFileSync('live.js', 'utf8'));
+			res.end(fs.readFileSync('background.png'));
 		break;
 		default:
 			console.error("Don't know what to do with " + req.url);
@@ -72,12 +63,10 @@ function formPage(options) {
 	page += '<title>Read On Paper</title>\n';
 	page += '<meta http-equiv="Content-Type" content="text/html; charset=utf-8">\n';
 	page += '<link rel="stylesheet" href="./readability.css" type="text/css">\n';
-	// page += '<script type="text/javascript" src="live.js"></script>';
 	page += '</head>\n';
 	page += '<body class="style-classy">\n';
-	// page += _.unescape(options.content);
 	page += options.content;
 	page += '</body>\n</html>';
-	fs.writeFileSync('sample.html', page, 'utf8');
+	// fs.writeFileSync('sample.html', page, 'utf8');
 	return page;
 }
