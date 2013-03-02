@@ -16,6 +16,7 @@ Relay server starts by default at port 3500
 
 * When browsing using Chrome a page you would like to read on your tablet, click paper 
 extension icon (looks like a page). 
+	* **note** Currently ReadOnPaper works on http:// pages only, not https:// !
 * Page will be processed by the Readability script and shown in an overlay. 
 * Cleaned up page content will be sent to the relay local server.
 * Open url http://<you computer ip>:3500/ from your tablet. The page should appear 
