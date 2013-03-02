@@ -29,3 +29,6 @@ in a readable format, looking like it was printed on paper.
 	* Using mobile Brightcove Workshop app, snap QR code to open the page.
 	* Click on the default **read** tab, the page content should appear.
 
+## Contact
+* Author: Gleb Bahmutov <gleb.bahmutov@gmail.com>
+* Source at https://github.com/bahmutov/read-on-paper

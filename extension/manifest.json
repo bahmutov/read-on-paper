@@ -2,12 +2,11 @@
     "manifest_version": 2,
 
     "name": "Read On Paper",
-    "description": "Sends page's text to a tablet for reading.",
+    "description": "Cleans the current page and sends text to a local server / tablet",
     "version": "0.1",
     "background": { 
       "scripts": [
         "lib/jquery/jquery-1.9.1.min.js",
-        "lib/lodash/underscore-min.js",
         "readOnPaper.js"
       ],
       "persistent": true
@@ -18,11 +17,10 @@
     },
     "permissions": [
         "tabs", 
-        "http://*/*",
-        "https://*/*"
+        "http://*/*"
     ],
     "content_scripts": [{
-        "matches": ["http://*/*", "https://*/*"],
+        "matches": ["http://*/*"],
         "js": [
             "lib/readability-0.5.1/readability.js"
         ],
